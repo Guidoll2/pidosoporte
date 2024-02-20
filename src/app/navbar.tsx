@@ -15,78 +15,80 @@ const [menuOpen, setMenuOpen] = useState (false)
 
     return (
       
-    <nav className='flex grid grid-cols-1 w-screen bg-white md:bg-gradient-radial from-blue-950'> 
+<nav id='NAVBAR' className='max-w-fit shadow-xl '> 
 
 
+<div className='flex grid grid-cols-3'>
+      
+<a className='' href='/'>
+<p className="text-4xl text-white p-4 px-10">soporte<span className='text-blue-500'>ar</span></p></a>
+<ul className='hidden md:flex flex-col-4 items-center px-1 gap-10 -translate-x-40 translate-y-2'>
+<li className='p-2'><a href="#containerservicios" className="text-gray-100 text-l font-bold uppercase">Servicios</a></li>
+<li className='p-2'><a href="#nosotros" className="text-gray-100 text-l font-bold uppercase">Nosotros</a></li>
+<li className='p-2'><a href="#partners"  className="text-gray-100 text-l font-bold uppercase">Partners</a></li>
+</ul>
 
-<div className=' items-center p-4'>
-      <a className='' href='/'>
-      <h1>pido<span className='text-blue-400'>soporte</span></h1></a></div>
+<div id="NAVMD" className="hidden md:flex flex-col-1 items-end justify-center -translate-y-3 z-[100] gap-5">
+     
 
-      <button onClick={handleNav} id="BOTONMENU" className="absolute top-6 right-4 cursor-pointer hover:opacity-30 hover:animate-bounce md:hidden">
-        
-  <div className="bar w-7 h-0.5 mb-1 bg-blue-950"></div>
-  <div className="bar w-7 h-0.5 mb-0.5 bg-blue-950"></div></button>
+<p className='p-2'><a href="https://stci.freshdesk.com/support/login" target='_blank' className="text-gray-100 text-l font-bold">Genere su ticket </a></p>
+
+<div className="flex justify-center items-end   ">        
+<p className="bg-gradient-to-l from-blue-500 to-emerald-500 text-white rounded-3xl p-0.5 w-fit h-fit">
+<a href='https://wa.me/+5491130265216' target='_blank' > 
+<span className="flex w-full bg-blue-950 text-white rounded-3xl p-2 md:text-l">
+Contáctenos
+</span></a>
+</p>
+</div>
 
 
-  <div className={
+</div>   
+
+ </div>
+ 
+<div onClick={handleNav} id="BOTONMENU" className="absolute top-8 right-4 cursor-pointer hover:opacity-30 hover:-skew-y-12 md:hidden">
+<menu/>
+
+<div className="bar w-7 h-0.5 mb-1 bg-blue-500  "></div>
+<div className="bar w-7 h-0.5 mb-1 bg-blue-500 "></div>
+<div className="bar w-5 ml-2 h-0.5 bg-blue-500 "></div>
+   
+</div>
+      
+<div className={
     menuOpen
-    ? 'absolute left-0 top-0 w-1/2 h-screen sm:hidden bg-zinc-700 ease-in duration-700 z-[100]'
-    : 'absolute left-[-100%] h-screen w-1/2 top-0 ease-in duration-700 '
+    ? 'absolute left-0 top-0 w-screen h-screen sm:hidden bg-gradient-to-tr from-black to-[#102955] p-10 ease-in duration-500 z-[100]'
+    : 'absolute top-[-100%] top-0 left-0 w-screen h-s   creen p-10 ease-in duration-500 '
 
 }>
 <div className='block'>
-
     <div onClick={handleNav} className='cursor-pointer flex justify-end'>
-        <h1 className='uppercase text-2xl -translate-x-4 translate-y-4 text-white hover:animate-bounce'>X</h1>
+        <h1 className='uppercase text-4xl text-white'>X</h1>
     </div>
 
+<div id='MENUCELU' className='mt-10 flex justify-center'>
 
-{/*ACA ESTA EL MENU DESPLEGABLE PARA PANTALLAS DE CELULAR*/}
-    
-    <div id='MENUDESPLEGABLE' className='mt-10 flex justify-center'>
+<ul className="flex grid grid-cols-1 list-none text-center space-y-4">
 
-<ul className="flex grid grid-cols-1 p-2">
-
-          <li className='p-2'><a href="tab1" target='_blank' className="text-zinc-200 p-2 text-l">Empresas</a></li>
-          <li className='p-2'><a href="tab2" target='_blank' className="text-zinc-200 p-2 text-l">Particulares</a></li>
-          <li className='p-2'><a href="tab3" target='_blank' className="text-zinc-200 p-2 text-l">Contacto</a></li>
-          <li className='p-2'><a href="tab4" target='_blank' className="text-zinc-200 p-2 text-l">Acerca de nosotros </a></li>
-          <li className='bg-blue-400 rounded-xl mt-20'><a href="tab5" target='_blank' className="text-center text-zinc-300"><p className=''>Portal clientes</p></a></li>
-
+        
+          <li className='w-full  p-2'><a href="#containerservicios" className="text-gray-100 p-2 text-2xl">Servicios</a></li>
+          <li className='w-full  p-2'><a href="#nosotros" className="text-gray-100 p-2 text-2xl">Nosotros</a></li>
+          <li className='w-full  p-2'><a href="partners" target='_blank' className="text-gray-100 p-2 text-2xl">Partners </a></li>
+          <li className='w-full  p-2'><a href='https://wa.me/+5491130265216' target='_blank' className="text-gray-100 p-2 text-2xl bg-gradient-to-br from-emerald-600 to-blue-700 rounded-full">Contáctenos</a></li>
+         
       </ul>
 </div>
 
-
-
+</div>
 </div>
 
 
-</div>
+
+ 
 
 
-{/**ACA ESTA EL MENU PARA PANTALLAS NORMALES */}
-
-<div id="NAVMD" className="hidden md:grid grid-cols-1 justify-items-end p-2 mr-8 ">
-     
-<ul className="flex gap-2">
-
-<li className='p-2'><a href="tab1" target='_blank' className="text-white text-l font-bold">Research</a></li>
-<li className='p-2'><a href="tab2" target='_blank' className="text-white text-l font-bold">Publications</a></li>
-<li className='p-2'><a href="tab3" target='_blank' className="text-white text-l font-bold">People</a></li>
-<li className='p-2'><a href="tab4" target='_blank' className="text-white text-l font-bold">Resources </a></li>
-<li className='p-2'><a href="tab5" target='_blank' className="text-white text-l font-bold">Contact </a></li>
-
-</ul>
-  </div>
-
-      
-    
-
-
-
-     
-      </nav>
+</nav>
 
 );
 }
