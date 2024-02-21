@@ -36,7 +36,7 @@ export default function Carousel2({ images }: Carousel2Props) {
               <Image
                 src={image}
                 objectFit="contain"
-                className="p-20"
+                className="p-5 md:p-20"
                 alt="logo"
                 width={1000}
                 height={1000}

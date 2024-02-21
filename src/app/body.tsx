@@ -102,49 +102,8 @@ Contáctenos
          
         </div>
 
-<div className="mt-20">
+<div className="mt-80 md:mt-20">
 <ServiciosContainer></ServiciosContainer></div>
-        {/** 
-
-  <div id="containerservicios" className="relative mt-80 bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5 mr-8 ml-8">        
-  <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l">
-  <span className="flex text-white rounded-3xl p-5 text-4xl md:text-6xl">
-  Nuestros servicios
-  </span>
- 
-  <div className="flex flex-col items-center gap-5 md:gap-8 p-10 -translate-y-5 md:flex-row md:items-start md:justify-center">
-  <div className="flex flex-col items-center translate-y-5">
-    <Image src='/disco-duroblanco.png' alt="itsupporticons" width={1000} height={1000} className="w-12 h-12 hover:animate-pulse" />
-    <p className="mt-4 text-center">Soporte IT Online 24hs</p>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <Image src='/rj45blanco.png' alt="itsupporticons" width={1000} height={1000} className="w-12 h-12 mt-5 hover:animate-pulse" />
-    <p className="mt-4 text-center">Instalación de fibra óptica - cable IPV6 - Wireless</p>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <Image src='/redblanco.png' alt="itsupporticons" width={1000} height={1000} className="w-12 h-12 mt-5 hover:animate-pulse" />
-    <p className="mt-4 text-center">Monitorización y gestión de redes</p>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <Image src='/cloudb.png' alt="itsupporticons" width={1000} height={1000} className="w-12 h-12 mt-5 hover:animate-pulse" />
-    <p className="mt-4 text-center">Servidores privados en la nube</p>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <Image src='/network.png' alt="itsupporticons" width={1000} height={1000} className="w-12 h-12 mt-5 hover:animate-pulse" />
-    <p className="mt-4 text-center">Networking para proveedores de servicios</p>
-  </div>
-</div>
-      
-
-
-  </div>
-
-    </div>*/}
-
 
 
   <div id="nosotros" className="flex grid grid-cols-1 mx-8 justify-center mx-auto mt-36 mr-8 ml-8 bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5">
@@ -182,7 +141,7 @@ Túneles de interconexión vía IP e internet con cifrado de datos IPSEC de 128b
 
 <div id="partners" className="relative mt-10 p-0.5">
   
-<p className="text-gray-300 text-center text-3xl md:text-3xl">Alianzas estratégicas:</p>
+<p className="text-gray-300 text-center text-xl md:text-3xl">Alianzas estratégicas:</p>
   <Carousel2 images={images}/>
 
 
