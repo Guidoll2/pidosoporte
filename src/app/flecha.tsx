@@ -24,7 +24,7 @@ const IconoFlecha = () => {
       src="flechaupsky400.png"
       width={1000}
       height={1000}
-      className={`fixed bottom-10 right-4 w-12 z-[100] ${showArrow ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 transition-opacity ease-in duration-300'}`}
+      className={`fixed bottom-10 right-4 w-14 h-14 z-[100] ${showArrow ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 transition-opacity ease-in duration-300'}`}
       alt="Flecha"
     /></a>
   );

@@ -27,7 +27,7 @@ const LogoWp = () => {
       src="wpgray200.png"
       width={1000}
       height={1000}
-      className={`fixed bottom-10 left-10 w-12 z-[100] ${showArrow ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 transition-opacity ease-in duration-300'}`}
+      className={`fixed bottom-10 left-10 w-16 animate-bounce z-[100] ${showArrow ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 transition-opacity ease-in duration-300'}`}
       alt="Logowp"
     /></a>
   );

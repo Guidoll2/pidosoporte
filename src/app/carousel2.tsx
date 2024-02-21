@@ -17,7 +17,7 @@ export default function Carousel2({ images }: Carousel2Props) {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 3,
     afterChange: (index: number) => setCurrentSlide(index),
     autoplay: true,
@@ -28,11 +28,11 @@ export default function Carousel2({ images }: Carousel2Props) {
     <div className="relative p-10" >
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="flex items-center justify-center h-full">
+          <div key={index} className="flex flex-row items-center justify-center h-full">
             <Image
               src={image}
               objectFit="contain"
-              className="animate-fadeIn w-12 h-12 "
+              className="animate-fadeIn md:basis-1/3 w-1/2 max-h-[40px] md:max-h-[130px]"
               alt="logo"
               width={1000}
               height={1000}

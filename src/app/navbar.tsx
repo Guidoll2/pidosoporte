@@ -21,7 +21,7 @@ const [menuOpen, setMenuOpen] = useState (false)
 <div className='flex grid grid-cols-3'>
       
 <a className='' href='/'>
-<p className="text-4xl text-white p-4 px-10">soporte<span className='text-blue-500'>ar</span></p></a>
+<p className="text-3xl text-white p-4 px-10">pido<span className='text-blue-500'>soporte</span></p></a>
 <ul className='hidden md:flex flex-col-4 items-center px-1 gap-10 -translate-x-40 translate-y-2'>
 <li className='p-2'><a href="#containerservicios" className="text-gray-100 text-l font-bold uppercase">Servicios</a></li>
 <li className='p-2'><a href="#nosotros" className="text-gray-100 text-l font-bold uppercase">Nosotros</a></li>
@@ -75,7 +75,8 @@ Contáctenos
           <li className='w-full  p-2'><a href="#containerservicios" className="text-gray-100 p-2 text-2xl">Servicios</a></li>
           <li className='w-full  p-2'><a href="#nosotros" className="text-gray-100 p-2 text-2xl">Nosotros</a></li>
           <li className='w-full  p-2'><a href="partners" target='_blank' className="text-gray-100 p-2 text-2xl">Partners </a></li>
-          <li className='w-full  p-2'><a href='https://wa.me/+5491130265216' target='_blank' className="text-gray-100 p-2 text-2xl bg-gradient-to-br from-emerald-600 to-blue-700 rounded-full">Contáctenos</a></li>
+          <li className='w-full  p-2'><a href='https://wa.me/+5491130265216' target='_blank' className="text-gray-100 p-2 text-2xl">Contáctenos </a></li>
+          <li className='w-full  p-2'><a href="https://stci.freshdesk.com/support/login" target='_blank' className="text-gray-100 p-2 text-2xl bg-gradient-to-br from-emerald-600 to-blue-700 rounded-full">Genere su ticket</a></li>
          
       </ul>
 </div>

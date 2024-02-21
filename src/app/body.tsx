@@ -10,7 +10,7 @@ const images = [
   '/windowsb.png',
   '/intelb.png',
   '/amdb.png',
-  '/lgb.png',
+  '/lgpro.png',
   '/samsungb.png',
   '/logitechb.png',
   '/linuxb.png',
@@ -50,7 +50,7 @@ const Body = () => {
 <h1 className="text-center text-3xl font-bold p-10 text-white md:text-5xl md:text-start md:font-normal">Soluciones en networking y soporte IT</h1>
 
 <div>
-<h1 className="text-center text-l p-10 -translate-y-10 text-gray-200 md:text-xl md:text-start">Diseñamos e implementamos soluciones personalizadas que impulsan el rendimiento y la eficiencia de su infraestructura.</h1>  
+<h1 className="text-center text-l p-10 -translate-y-10 text-gray-200 md:text-xl md:text-start">Diseñamos soluciones personalizadas que impulsan el rendimiento y la eficiencia de su infraestructura.</h1>  
 </div>
 
 <div className="flex justify-center -translate-y-10">        
@@ -72,13 +72,13 @@ Contáctenos
 </div>  
 
 
-        <div id='MD' className="hidden md:flex grid grid-cols-1 md:p-20 md:grid grid-cols-2 z-[2]">
+        <div id='MD' className="hidden md:flex grid grid-cols-1 md:p-5 md:grid grid-cols-2 z-[2]">
 
         <div className="">
         <h1 className="text-center text-3xl font-bold p-10 text-white md:text-5xl md:text-start md:font-normal">Soluciones en networking y soporte IT</h1>
 
         <div>
-        <h1 className="text-center text-l p-10 -translate-y-10 text-gray-200 md:text-xl md:text-start">Diseñamos e implementamos soluciones personalizadas que impulsan el rendimiento y la eficiencia de su infraestructura.</h1>  
+        <h1 className="text-center text-l p-10 -translate-y-10 text-gray-200 md:text-xl md:text-start">Diseñamos soluciones personalizadas que impulsan el rendimiento y la eficiencia de su infraestructura.</h1>  
         </div>
 
         <div className="flex justify-center -translate-y-10">        
@@ -97,7 +97,7 @@ Contáctenos
         </div>
 
         <div>
-          <Image src='/downsinfondo.png' alt="itsupporticons" width={1000} height={1000} className="absolute w-12 h-12 bottom-5 left-1/2 animate-[bounce_2s_ease-in-out_infinite] -z-[5]"/>
+          <Image src='/downsinfondo.png' alt="itsupporticons" width={1000} height={1000} className="absolute w-16 h-16 bottom-5 left-1/2 animate-[bounce_2s_ease-in-out_infinite] -z-[5]"/>
         </div>
 
          
@@ -190,7 +190,7 @@ Túneles de interconexión vía IP e internet con cifrado de datos IPSEC de 128b
 <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-blue-500 rounded-l w-max-full h-max-full p-20">
 
 <p className="text-center text-4xl md:p-5 md:text-4xl text-white">Conectesé con un experto</p>
-<p className="text-center text-l p-2 md:p-5 md:text-xl text-white">Ya sea que necesite implementaciones para nuevas construcciones o actualizaciones de sistemas existentes, nuestros consultores altamente experimentados pueden colaborar con usted para abordar sus necesidades específicas de tecnología, brindando soluciones de seguridad y protección informática de vanguardia. Descubra el futuro de la tecnología con nosotros.</p>
+<p className="text-center text-l p-2 md:p-5 md:text-xl text-white">Ya sea que necesite nuevas instalaciones o actualizaciones de sistemas existentes, nuestros consultores altamente experimentados pueden colaborar con usted para abordar sus necesidades específicas de tecnología, brindando soluciones de seguridad y protección informática de vanguardia. Descubra el futuro de la tecnología con nosotros.</p>
 
 <div className="flex flex-col-1 items-center justify-center gap-4">
 <button className="bg-gradient-to-l from-blue-500 to-emerald-500 text-white rounded-3xl p-0.5 w-fit h-fit">
@@ -215,7 +215,7 @@ Correo Electrónico
   <div className="flex flex-col items-center justify-center">
     <div>
       <p className="text-4xl text-gray-400 p-4 md:p-5 md:text-5xl text-center">
-        soporte<span className='text-blue-500'>ar</span>
+        pido<span className='text-blue-500'>soporte</span>
       </p>
     </div>
 
@@ -226,12 +226,12 @@ Correo Electrónico
     </div>
   </div>
 
-  <p className="text-center text-xs text-gray-900 p-2 md:text-l p-10 mt-5">
-    © 2024 Soportear. Reservados todos los derechos. Es posible que algunos productos o servicios no estén disponibles en todos los mercados. Los nombres de productos/servicios enumerados en este documento son marcas y/o marcas registradas de sus respectivos propietarios y se utilizan bajo licencia o con permiso. Uso no autorizado estrictamente prohibido. Licencias propiedad de Soportear S.A.S
+  <p className="text-center text-l text-gray-900 p-2 md:text-l p-10 mt-5">
+    © 2024 Pidosoporte es una marca registrada de soporte<span className="text-blue-500">ar</span>. S.A.S Argentina Reservados todos los derechos. Es posible que algunos productos o servicios no estén disponibles en todos los mercados. Los nombres de productos/servicios enumerados en este documento son marcas y/o marcas registradas de sus respectivos propietarios y se utilizan bajo licencia o con permiso. Uso no autorizado estrictamente prohibido. Licencias propiedad de Soportear S.A.S
   </p>
 
   <a href="https://www.guidollaurado.com" target="_blank">
-    <p className="text-[10px] text-gray-900 text-center p-5 md:text-xl mt-10">Diseño y desarrollo / Guido Llaurado</p>
+    <p className="text-[10px] text-gray-900 text-center p-5 text-xl mt-10">Diseño y desarrollo / Guido Llaurado</p>
   </a>
 </footer>
 
