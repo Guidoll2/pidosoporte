@@ -10,8 +10,11 @@ import LogoWp from './logowp';
 export default function Home() {
   return (
     
-      <main className="">
+<main className="max-w-screen">
+
+
 <LogoWp></LogoWp>
+
 <IconoFlecha></IconoFlecha>
 
 

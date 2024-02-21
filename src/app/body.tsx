@@ -31,18 +31,18 @@ const images2 = [
   '/muni.png',
   '/ftrack.png',
  
-  
-
 ]
 
 const Body = () => {
     return (
 
-<div className="flex grid grid-cols-1 bg-gradient-to-tr from-black to-[#102955]">
+
+<div className="flex grid grid-cols-1 bg-gradient-to-tr from-black to-[#102955] max-w-screen ">
+
 <div id="navbar" className="">
 <Navbar></Navbar>
 </div>
-
+ 
         
 <div id="SM" className="md:hidden flex grid grid-cols-1 z-[2]">
 
@@ -65,7 +65,7 @@ Contáctenos
 
 
 <div>
-  <Image src='/fondoredes.jpeg' alt="itsupporticons" width={1000} height={1000} className="absolute mx-auto opacity-60 w-screen top-[390px]  right-0 -z-[5]"/>
+  <Image src='/fondoredes.jpeg' alt="itsupporticons" width={1000} height={1000} className="absolute mx-auto opacity-60 w-screen top-[390px] right-0 -z-[5]"/>
 </div>
 
  
