@@ -15,37 +15,38 @@ const [menuOpen, setMenuOpen] = useState (false)
 
     return (
       
-<nav id='NAVBAR' className='max-w-fit shadow-xl '> 
+<nav id='NAVBAR' className='w-screen shadow-xl'> 
 
 
-<div className='flex grid grid-cols-3'>
-      
-<a className='' href='/'>
-<p className="text-3xl text-white p-4 px-10">pido<span className='text-blue-500'>soporte</span></p></a>
-<ul className='hidden md:flex flex-col-4 items-center px-1 gap-10 -translate-x-40 translate-y-2'>
-<li className='p-2'><a href="#containerservicios" className="text-gray-100 text-l font-bold uppercase">Servicios</a></li>
-<li className='p-2'><a href="#nosotros" className="text-gray-100 text-l font-bold uppercase">Nosotros</a></li>
-<li className='p-2'><a href="#partners"  className="text-gray-100 text-l font-bold uppercase">Partners</a></li>
-</ul>
+<div className='flex justify-between items-center p-4'>
 
-<div id="NAVMD" className="hidden md:flex flex-col-1 items-end justify-center -translate-y-3 z-[100] gap-5">
-     
-
-<p className='p-2'><a href="https://stci.freshdesk.com/support/login" target='_blank' className="text-gray-100 text-l font-bold">Genere su ticket </a></p>
-
-<div className="flex justify-center items-end   ">        
-<p className="bg-gradient-to-l from-blue-500 to-emerald-500 text-white rounded-3xl p-0.5 w-fit h-fit">
-<a href='https://wa.me/+5491130265216' target='_blank' > 
-<span className="flex w-full bg-blue-950 text-white rounded-3xl p-2 md:text-l">
-Contáctenos
-</span></a>
-</p>
+<div className='flex items-center'>
+  <a className='' href='/'>
+    <p className="text-3xl text-white">pido<span className='text-blue-500'>soporte</span></p>
+  </a>
 </div>
 
+<ul className='hidden md:flex flex-row items-center gap-10'>
+  <li className='p-2'><a href="#containerservicios" className="text-gray-100 text-l font-bold uppercase">Servicios</a></li>
+  <li className='p-2'><a href="#nosotros" className="text-gray-100 text-l font-bold uppercase">Nosotros</a></li>
+  <li className='p-2'><a href="#partners" className="text-gray-100 text-l font-bold uppercase">Partners</a></li>
+</ul>
 
-</div>   
+<div id="NAVMD" className="hidden md:flex items-center justify-end gap-5 mr-5">
+  <p className='p-2'><a href="https://stci.freshdesk.com/support/login" target='_blank' className="text-gray-100 text-l font-bold">Genere su ticket</a></p>
 
- </div>
+  <div className="">
+    <p className="bg-gradient-to-l from-blue-500 to-emerald-500 text-white rounded-3xl p-0.5 w-fit h-fit">
+      <a href='https://wa.me/+5491130265216' target='_blank'>
+        <span className="flex w-full bg-blue-950 text-white rounded-3xl p-2 md:text-l justify-end">
+          Contáctenos
+        </span>
+      </a>
+    </p>
+  </div>
+</div>
+
+</div>
  
 <div onClick={handleNav} id="BOTONMENU" className="absolute top-8 right-4 cursor-pointer hover:opacity-30 hover:-skew-y-12 md:hidden">
 <menu/>

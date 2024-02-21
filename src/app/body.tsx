@@ -4,23 +4,22 @@ import Navbar from "./navbar";
 import './globals.css';
 import Carousel from "./carrousel";
 import Carousel2 from "./carousel2";
-
+import ServiciosContainer from "./servicios";
 
 const images = [
   '/windowsb.png',
   '/intelb.png',
   '/amdb.png',
-  '/lgpro.png',
+  '/lgg.png',
   '/samsungb.png',
   '/logitechb.png',
   '/linuxb.png',
-  '/hpb.png',
+  '/hppro.png',
   '/adobeb.png',
   '/ubiquiti.png',
-  '/veritv.png',
-  '/hpenter.png',
-  '/Kingston.png',
-  '/MikroTik-logo.png',
+  '/vertivpro.png',
+  '/kg.png',
+  '/mk.png',
   '/wd.png',
   
 
@@ -65,7 +64,7 @@ Contáctenos
 
 
 <div>
-  <Image src='/fondoredes.jpeg' alt="itsupporticons" width={1000} height={1000} className="absolute mx-auto opacity-60 w-screen top-[390px] right-0 -z-[5]"/>
+  <Image src='/itsupport.jpeg' alt="itsupporticons" width={1000} height={1000} className="absolute mx-auto opacity-60 w-screen top-[390px] right-0 -z-[5]"/>
 </div>
 
  
@@ -75,10 +74,10 @@ Contáctenos
         <div id='MD' className="hidden md:flex grid grid-cols-1 md:p-5 md:grid grid-cols-2 z-[2]">
 
         <div className="">
-        <h1 className="text-center text-3xl font-bold p-10 text-white md:text-5xl md:text-start md:font-normal">Soluciones en networking y soporte IT</h1>
+        <h1 className="text-center text-3xl font-bold p-10 text-white md:text-5xl md:text-start md:font-normal">Soporte IT y networking empresarial</h1>
 
         <div>
-        <h1 className="text-center text-l p-10 -translate-y-10 text-gray-200 md:text-xl md:text-start">Diseñamos soluciones personalizadas que impulsan el rendimiento y la eficiencia de su infraestructura.</h1>  
+        <h1 className="text-center text-l p-10 -translate-y-10 text-gray-200 md:text-xl md:text-start">Soluciones personalizadas en hardware y software para empresas.</h1>  
         </div>
 
         <div className="flex justify-center -translate-y-10">        
@@ -93,7 +92,7 @@ Contáctenos
  
 
         <div>
-          <Image src='/fondoredes.jpeg' alt="itsupporticons" width={1000} height={1000} className="absolute mx-auto opacity-30 w-screen top-20 h-full left-0 -z-[5]"/>
+          <Image src='/itsupport.jpeg' alt="itsupporticons" width={1000} height={1000} className="absolute mx-auto opacity-70 w-1/2 top-20 h-3/4 right-0 -z-[5] p-5 rounded-[100px]"/>
         </div>
 
         <div>
@@ -102,6 +101,10 @@ Contáctenos
 
          
         </div>
+
+<div className="mt-20">
+<ServiciosContainer></ServiciosContainer></div>
+        {/** 
 
   <div id="containerservicios" className="relative mt-80 bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5 mr-8 ml-8">        
   <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l">
@@ -140,11 +143,11 @@ Contáctenos
 
   </div>
 
-  </div>
+    </div>*/}
 
 
 
-  <div id="nosotros" className="flex grid grid-cols-1 mx-8 justify-center mx-auto mt-10 mr-8 ml-8 bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5">
+  <div id="nosotros" className="flex grid grid-cols-1 mx-8 justify-center mx-auto mt-36 mr-8 ml-8 bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5">
   <div className="bg-gray-900 rounded-l">
     <p className="flex text-white text-center rounded-3xl p-5 text-3xl md:text-5xl justify-center">
     Disponibles 24/7 - Todo el año
@@ -177,13 +180,12 @@ Túneles de interconexión vía IP e internet con cifrado de datos IPSEC de 128b
 
 
 
-<div id="partners" className="relative mt-10 bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5">
-  <div className="bg-gray-900 rounded-l w-screen  h-max-full">
-<p className="text-center text-xl p-5 md:text-3xl">Marcas con las que trabajamos</p>
+<div id="partners" className="relative mt-10 p-0.5">
+  
+<p className="text-gray-300 text-center text-3xl md:text-3xl">Alianzas estratégicas:</p>
   <Carousel2 images={images}/>
 
 
-  </div>
 </div>
 
 

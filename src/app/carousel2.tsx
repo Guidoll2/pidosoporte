@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { IoInfiniteOutline } from "react-icons/io5";
 
 interface Carousel2Props {
   images: string[];
@@ -16,44 +17,36 @@ export default function Carousel2({ images }: Carousel2Props) {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    speed: 40000,
+    slidesToShow: 5,
+    slidesToScroll: 15,
+    centerMode: false,  // Permite que haya un centro activo   
+    cssEase: "linear",  // Utiliza una transición linear para el efecto de desplazamiento constante
     afterChange: (index: number) => setCurrentSlide(index),
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 1000,
+    
   };
-
   return (
-    <div className="relative p-10" >
+    <div className="relative">
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="flex flex-row items-center justify-center h-full">
-            <Image
-              src={image}
-              objectFit="contain"
-              className="animate-fadeIn md:basis-1/3 w-1/2 max-h-[40px] md:max-h-[130px]"
-              alt="logo"
-              width={1000}
-              height={1000}
-            />
+          <div key={index} className=''> 
+            {image === '/' ? null : (
+              <Image
+                src={image}
+                objectFit="contain"
+                className="p-20"
+                alt="logo"
+                width={1000}
+                height={1000}
+              />
+            )}
           </div>
         ))}
       </Slider>
   
-      <div className="relative flex justify-center p-2">
-        {images.map((_, index) => (
-          <div
-            key={index}
-            className={
-              index === currentSlide
-                ? "h-2 w-2 bg-gray-700 rounded-full mx-2 mb-2 mt-5 cursor-pointer"
-                : "h-2 w-2 bg-gray-300 rounded-full mx-2 mb-2 mt-5 cursor-pointer"
-            }
-            onClick={() => setCurrentSlide(index)}
-          />
-        ))}
-      </div>
+   
     </div>
   );
 }

@@ -53,3 +53,24 @@ body {
   background-color: #1D4ED8;
   margin-right: 10px;
 }
+
+.slick-center {
+  /* Estilo para la imagen en el centro */
+  opacity: 1;
+}
+
+.slick-slide {
+  /* Estilo para todas las diapositivas */
+  transition: opacity 0.5s ease-in-out;  /* Ajusta la velocidad de la transición según tus preferencias */
+}
+
+.slick-slide:not(.slick-center) {
+  /* Estilo para las imágenes que no están en el centro (efecto de fade out) */
+  opacity: 0.5;  /* Puedes ajustar la opacidad según tus preferencias */
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);  /* Ajusta el sombreado para el efecto de fade out */
+  box-sizing: 10px;
+}
+
+.expandable-container {
+  transition: height 0.5s ease-in-out; /* Puedes ajustar la duración (0.5s) según tus preferencias */
+}
