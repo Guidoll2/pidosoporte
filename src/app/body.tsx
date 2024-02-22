@@ -49,7 +49,7 @@ const Body = () => {
 <h1 className="text-center text-3xl font-bold p-10 text-white md:text-5xl md:text-start md:font-normal">Soluciones en networking y soporte IT</h1>
 
 <div>
-<h1 className="text-center text-l p-10 -translate-y-10 text-gray-200 md:text-xl md:text-start">Diseñamos soluciones personalizadas que impulsan el rendimiento y la eficiencia de su infraestructura.</h1>  
+<h1 className="text-center text-l p-10 -translate-y-10 text-gray-200 md:text-xl md:text-start">Combinamos la mejor tecnología disponible en hardware y software para crear soluciones completas y eficientes.</h1>  
 </div>
 
 <div className="flex justify-center -translate-y-10">        
@@ -109,26 +109,18 @@ Contáctenos
   <div id="nosotros" className="flex grid grid-cols-1 mx-8 justify-center mx-auto mt-36 mr-8 ml-8 bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5">
   <div className="bg-gray-900 rounded-l">
     <p className="flex text-white text-center rounded-3xl p-5 text-3xl md:text-5xl justify-center">
-    Disponibles 24/7 - Todo el año
+    Nosotros
     </p>
-    <span className="flex p-5 text-center justify-center text-l md:text-2xl underline decoration-blue-700 underline-offset-8">
-      Tu empresa funcionando sin interrupciones
-    </span>
-  
+ 
     <div className="flex grid grid-cols-1 p-5 gap-8">
-    <p className="text-2xl">Soporte técnico online</p>
-    <p>Brindamos soporte y asistencia de manera remota para solucionar cualquier imprevisto en sus estaciones de trabajo.</p>
-    <p className="text-2xl">Instalación de hard y software</p>
-    <p>En asociación con una amplia gama de socios tecnológicos, proporcionamos las últimas innovaciones en software y hardware para satisfacer las necesidades específicas de su empresa o comercio, asegurando una infraestructura tecnológica actualizada.</p>
-    <p className="text-2xl">Urgencias en el acto</p>
-    <p>Contratos con diferentes opciones de SLA (tiempo de respuesta y solución de problemas). Respuesta telefónica y contacto directo en caso de urgencia o denegación de servicio.
-    </p>
-<ul className="flex grid grid-cols-1 list-disc  p-10 -mt-5 gap-2">
-<li>
-Monitorización de redes y dispositivos internos y externos</li>
-<li>VPN</li>
-<li>
-Túneles de interconexión vía IP e internet con cifrado de datos IPSEC de 128bit</li></ul>
+    <p className="text-2xl">
+Desde 1992, somos una empresa especializada en proporcionar soluciones integrales de tecnologías de información para proyectos de sistemas, comunicaciones e informática. Nuestro enfoque abarca desde la consultoría inicial hasta la implementación, asegurando la mejor solución tecnológica.
+
+Contamos con un equipo altamente capacitado que inspira confianza en la implementación de nuevos proyectos y en la prestación de soporte en situaciones críticas.
+
+Nuestra fortaleza radica en la confianza y satisfacción de nuestros clientes. Nos comprometemos a ofrecer una visión imparcial de su infraestructura actual, adaptando planes de trabajo según su presupuesto y necesidades. Ofrecemos servicios de auditoría, gerenciamiento externo del personal de IT, implementación de nuevas tecnologías y capacitación para su equipo.</p>
+  
+
     
   </div>
 
