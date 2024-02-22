@@ -75,7 +75,7 @@ const [menuOpen, setMenuOpen] = useState (false)
         
           <li className='w-full  p-2'><a href="#containerservicios" className="text-gray-100 p-2 text-2xl">Servicios</a></li>
           <li className='w-full  p-2'><a href="#nosotros" className="text-gray-100 p-2 text-2xl">Nosotros</a></li>
-          <li className='w-full  p-2'><a href="partners" target='_blank' className="text-gray-100 p-2 text-2xl">Partners </a></li>
+          <li className='w-full  p-2'><a href="#partners" className="text-gray-100 p-2 text-2xl">Partners </a></li>
           <li className='w-full  p-2'><a href='https://wa.me/+5491130265216' target='_blank' className="text-gray-100 p-2 text-2xl">Contáctenos </a></li>
           <li className='w-full  p-2'><a href="https://stci.freshdesk.com/support/login" target='_blank' className="text-gray-100 p-2 text-2xl bg-gradient-to-br from-emerald-600 to-blue-700 rounded-full">Genere su ticket</a></li>
          
