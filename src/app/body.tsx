@@ -113,8 +113,9 @@ Contáctenos
     </p>
  
     <div className="flex grid grid-cols-1 p-5 gap-8">
-    <p className="text-2xl">
-Desde 1992, somos una empresa especializada en proporcionar soluciones integrales de tecnologías de información para proyectos de sistemas, comunicaciones e informática. Nuestro enfoque abarca desde la consultoría inicial hasta la implementación, asegurando la mejor solución tecnológica.
+    <p className="text-xl p-5">
+Desde 1992, somos una empresa especializada en proporcionar soluciones integrales de tecnologías de información para proyectos de sistemas, comunicaciones e informática. 
+Nuestro enfoque abarca desde la consultoría inicial hasta la implementación, asegurando la mejor solución tecnológica.
 
 Contamos con un equipo altamente capacitado que inspira confianza en la implementación de nuevos proyectos y en la prestación de soporte en situaciones críticas.
 
