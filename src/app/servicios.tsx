@@ -60,7 +60,7 @@ const ServiciosContainer = () => {
             <div id="containerservicios" className= "relative bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5 ">
             <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
 
-            <p className="text-3xl bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text">Soporte IT Online:</p>
+            <p className="text-3xl text-center bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text">Soporte IT Online:</p>
             <ul>
               <li className="text-center p-5">Mediante un sistema de ticket vía Email mantenemos su empresa en correcto funcionamiento 24×7 los 365 días del año.</li>
             </ul></div></div>
@@ -69,7 +69,7 @@ const ServiciosContainer = () => {
             <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
 
 
-            <p className="text-3xl bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text ">Redes:</p>
+            <p className="text-3xl text-center bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text ">Redes:</p>
             <ul>
               <li className="text-center p-5">Llevamos a cabo la implementación y diseño de sistemas de cableado estructurado, abarcando CAT5 / CAT6 y fibra óptica. Nos encargamos de instalar u organizar racks y realizar mejoras en su disposición.</li>
             </ul></div></div>
@@ -77,7 +77,7 @@ const ServiciosContainer = () => {
 
             <div id="containerservicios" className= "relative bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5 ">
             <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
-            <p className="text-3xl bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text ">Videovigilancia y control de acceso:</p>
+            <p className="text-3xl text-center bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text ">Videovigilancia y control de acceso:</p>
             <ul>
               <li className="text-center p-5">Instalamos cámaras IP y sistemas de CCTV así como también soluciones para el control de acceso.</li>
             </ul>
@@ -86,7 +86,7 @@ const ServiciosContainer = () => {
 
             <div id="containerservicios" className= "relative bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5 ">
             <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
-            <p className="text-3xl bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text ">Hardware y software empresarial:</p>
+            <p className="text-3xl text-center bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text ">Hardware y software empresarial:</p>
             <ul>
               <li className="text-center p-5">
 Disponemos de una extensa red de colaboradores tecnológicos que nos capacitan para ofrecer las últimas innovaciones en software y hardware, asegurándonos de mantenernos al día con los requisitos específicos de su empresa o comercio.</li>
@@ -95,7 +95,7 @@ Disponemos de una extensa red de colaboradores tecnológicos que nos capacitan p
 
 <div id="containerservicios" className= "relative bg-gradient-to-r from-blue-500 to-red-600 text-white rounded-l p-0.5 ">
             <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
-            <p className="text-3xl bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text ">Urgencias en el acto:</p>
+            <p className="text-3xl text-center bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text ">Urgencias en el acto:</p>
             <ul>
               <li className="text-center p-5" >Contratos con diferentes opciones de SLA (tiempo de respuesta y solución de problemas). Respuesta telefónica y contacto directo en caso de urgencia o denegación de servicio.</li>
             </ul>
