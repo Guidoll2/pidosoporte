@@ -1,32 +1,31 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import { Plus } from 'lucide-react';
+import { Plus, Server, Network, Camera, Cloud, Share2 } from 'lucide-react';
 
 const services = [
   {
     title: 'Soporte IT Online 24hs',
-    icon: '/disco-duroblanco.png',
+    icon: <Server size={64} className="mb-4 text-blue-400" />,
     desc: 'Sistema de ticket vía Email para mantener su empresa en funcionamiento 24×7, 365 días al año.',
   },
   {
     title: 'Instalación y Monitorización de Redes',
-    icon: '/redblanco.png',
+    icon: <Network size={64} className="mb-4 text-blue-400" />,
     desc: 'Implementación de cableado CAT5/CAT6, fibra óptica y organización de racks con monitoreo proactivo.',
   },
   {
     title: 'CCTV y Control de Acceso',
-    icon: '/cctv.png',
+    icon: <Camera size={64} className="mb-4 text-blue-400" />,
     desc: 'Instalación de cámaras IP, sistemas CCTV y soluciones avanzadas de control de acceso.',
   },
   {
     title: 'Servidores Privados en la Nube',
-    icon: '/cloudb.png',
+    icon: <Cloud size={64} className="mb-4 text-blue-400" />,
     desc: 'Infraestructura en la nube con alta disponibilidad y seguridad personalizada para su negocio.',
   },
   {
     title: 'Networking para Proveedores',
-    icon: '/network.png',
+    icon: <Share2 size={64} className="mb-4 text-blue-400" />,
     desc: 'Soluciones de redes escalables diseñadas para operadores y proveedores de servicios.',
   },
 ];
@@ -57,13 +56,7 @@ const ServiciosContainer = () => {
               className="bg-gray-900 rounded-2xl p-6 flex flex-col items-center text-center relative"
               onClick={() => setSelected(selected === idx ? null : idx)}
             >
-              <Image
-                src={svc.icon}
-                alt={svc.title}
-                width={64}
-                height={64}
-                className="mb-4"
-              />
+              {svc.icon}
               <h3 className="text-xl font-semibold text-white mb-2">
                 {svc.title}
               </h3>

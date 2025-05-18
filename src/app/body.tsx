@@ -3,7 +3,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Navbar from "./navbar";
 import './globals.css';
-import Carousel from "./carrousel";
 import Carousel2 from "./carousel2";
 import ServiciosContainer from "./servicios";
 import { CheckCircle, Users, Award, Phone, Mail } from 'lucide-react';
@@ -23,11 +22,6 @@ const images = [
   '/kg.png',
   '/mk.png',
   '/wd.png',
-];
-
-const images2 = [
-  '/muni.png',
-  '/ftrack.png',
 ];
 
 const Body = () => (
@@ -74,7 +68,7 @@ const Body = () => (
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <Image
-          src={"/itsupport.jpeg"}
+          src={"/Itsupport.jpeg"}
           alt="IT Support"
           width={600}
           height={600}
