@@ -74,7 +74,7 @@ const Body = () => (
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <Image
-          src="/itsupport.jpeg"
+          src={"/itsupport.jpeg"}
           alt="IT Support"
           width={600}
           height={600}
