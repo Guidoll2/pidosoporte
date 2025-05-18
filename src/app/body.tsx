@@ -52,7 +52,7 @@ const Body = () => (
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <Image
-          src={"/Itsupport.webp"}
+          src={"/image1.webp"}
           alt="IT Support"
           width={600}
           height={600}

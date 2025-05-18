@@ -68,7 +68,7 @@ export default function Carousel2() {
   };
 
   return (
-    <div className="relative bg-gray-500 p-6 rounded-3xl shadow-xl overflow-hidden">
+    <div className="relative bg-gray-600 p-6 rounded-3xl shadow-xl overflow-hidden">
       <Slider {...settings}>
         {brandIcons.map(({ icon: Icon, label, color }, idx) => (
           <div key={idx} className="flex flex-col justify-center items-center p-4">
