@@ -7,22 +7,6 @@ import Carousel2 from "./carousel2";
 import ServiciosContainer from "./servicios";
 import { CheckCircle, Users, Award, Phone, Mail } from 'lucide-react';
 
-const images = [
-  '/windowsb.png',
-  '/intelb.png',
-  '/amdb.png',
-  '/lgg.png',
-  '/samsungb.png',
-  '/logitechb.png',
-  '/linuxb.png',
-  '/hppro.png',
-  '/adobeb.png',
-  '/ubiquiti.png',
-  '/vertivpro.png',
-  '/kg.png',
-  '/mk.png',
-  '/wd.png',
-];
 
 const Body = () => (
   <div className="bg-gradient-to-tr from-black to-[#102955] text-white max-w-screen min-h-screen">
@@ -130,7 +114,7 @@ const Body = () => (
       <h3 className="text-xl md:text-3xl text-gray-300 mb-8">
         Alianzas estratégicas
       </h3>
-      <Carousel2 images={images} />
+      <Carousel2 />
     </section>
 
     {/* Connect Section */}

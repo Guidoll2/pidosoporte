@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Server, Network, Camera, Cloud, Share2 } from 'lucide-react';
+import { Plus, Server, Network, Cloud, Share2, Cctv } from 'lucide-react';
 
 const services = [
   {
@@ -15,7 +15,7 @@ const services = [
   },
   {
     title: 'CCTV y Control de Acceso',
-    icon: <Camera size={64} className="mb-4 text-blue-400" />,
+    icon: <Cctv size={64} className="mb-4 text-blue-400" />,
     desc: 'Instalación de cámaras IP, sistemas CCTV y soluciones avanzadas de control de acceso.',
   },
   {
