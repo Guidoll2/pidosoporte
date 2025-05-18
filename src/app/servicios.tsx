@@ -1,128 +1,109 @@
-'use client'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import { Plus } from 'lucide-react';
 
-import React, { useState } from "react";
-import Image from "next/image";
-
-
+const services = [
+  {
+    title: 'Soporte IT Online 24hs',
+    icon: '/disco-duroblanco.png',
+    desc: 'Sistema de ticket vía Email para mantener su empresa en funcionamiento 24×7, 365 días al año.',
+  },
+  {
+    title: 'Instalación y Monitorización de Redes',
+    icon: '/redblanco.png',
+    desc: 'Implementación de cableado CAT5/CAT6, fibra óptica y organización de racks con monitoreo proactivo.',
+  },
+  {
+    title: 'CCTV y Control de Acceso',
+    icon: '/cctv.png',
+    desc: 'Instalación de cámaras IP, sistemas CCTV y soluciones avanzadas de control de acceso.',
+  },
+  {
+    title: 'Servidores Privados en la Nube',
+    icon: '/cloudb.png',
+    desc: 'Infraestructura en la nube con alta disponibilidad y seguridad personalizada para su negocio.',
+  },
+  {
+    title: 'Networking para Proveedores',
+    icon: '/network.png',
+    desc: 'Soluciones de redes escalables diseñadas para operadores y proveedores de servicios.',
+  },
+];
 
 const ServiciosContainer = () => {
-  const [expanded, setExpanded] = useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded); 
-  };
+  const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    
-    
-    <div id="containerservicios" className={`relative mt-16 md:mt-40 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-l p-0.5 mr-8 ml-8 ${expanded ?  'h-auto' : 'h-auto overflow-hidden'}`}>
-      <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
-        <span className="flex text-white rounded-3xl p-5 text-4xl md:text-6xl">
-          Nuestros servicios
-        </span>
+    <section id="containerservicios" className="relative mt-16 md:mt-40 px-6 md:px-20">
+      <motion.h2
+        className="text-4xl md:text-6xl font-bold text-center text-white mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Nuestros servicios
+      </motion.h2>
 
-        <div className="flex flex-col items-center gap-5 md:gap-8 p-10 -translate-y-5 md:flex-row md:items-start md:justify-center">
-        
-        <div className="flex flex-col items-center translate-y-5 ">
-      <Image src='/disco-duroblanco.png' alt="itsupporticons" width={1000} height={1000} className="w-12 h-12 hover:animate-pulse" />
-        <p className="mt-4 text-center">Soporte IT Online 24hs</p>
-    
-         </div>
-
-
-  <div className="flex flex-col items-center">
-    <Image src='/redblanco.png' alt="itsupporticons" width={1000} height={1000} className="w-12 h-12 mt-5 hover:animate-pulse" />
-    <p className="mt-4 text-center">Instalación, gestión y monitorización de redes</p>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <Image src='/cctv.png' alt="cctvicon" width={1000} height={1000} className="w-12 h-12 mt-5 hover:animate-pulse" />
-    <p className="mt-4 text-center">CCTV - Control de acceso.</p>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <Image src='/cloudb.png' alt="itsupporticons" width={1000} height={1000} className="w-12 h-12 mt-5 hover:animate-pulse" />
-    <p className="mt-4 text-center">Servidores privados en la nube</p>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <Image src='/network.png' alt="itsupporticons" width={1000} height={1000} className="w-12 h-12 mt-5 hover:animate-pulse" />
-    <p className="mt-4 text-center">Networking para proveedores de servicios</p>
-  </div>
-        </div>
-
-        {expanded && (
-          
-          
-          <div className="flex grid grid-cols-1 md:grid-cols-1 items-center gap-5 md:gap-20 md:p-10 md:flex-row md:items-start md:justify-center expandable-container">
-            
-
-            <div id="containerservicios" className= "relative bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-l p-0.5 w-full">
-            <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
-
-            <p className="text-3xl text-center bg-gradient-to-r from-blue-500 to-emerald-500 text-transparent bg-clip-text">Soporte IT Online:</p>
-            <ul>
-              <li className="text-center p-5">Mediante un sistema de ticket vía Email mantenemos su empresa en correcto funcionamiento 24×7 los 365 días del año.</li>
-            </ul></div></div>
-            
-            <div id="containerservicios" className= "relative bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-l p-0.5 ">
-            <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
-
-
-            <p className="text-3xl text-center bg-gradient-to-r from-blue-500 to-emerald-500 text-transparent bg-clip-text ">Redes:</p>
-            <ul>
-              <li className="text-center p-5">Llevamos a cabo la implementación y diseño de sistemas de cableado estructurado, abarcando CAT5 / CAT6 y fibra óptica. Nos encargamos de instalar u organizar racks y realizar mejoras en su disposición.</li>
-            </ul></div></div>
-
-
-            <div id="containerservicios" className= "relative bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-l p-0.5 ">
-            <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
-            <p className="text-3xl text-center bg-gradient-to-r from-blue-500 to-emerald-500 text-transparent bg-clip-text ">Videovigilancia y control de acceso:</p>
-            <ul>
-              <li className="text-center p-5">Instalamos cámaras IP y sistemas de CCTV así como también soluciones para el control de acceso.</li>
-            </ul>
-
-            </div></div>
-
-            <div id="containerservicios" className= "relative bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-l p-0.5 ">
-            <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
-            <p className="text-3xl text-center bg-gradient-to-r from-blue-500 to-emerald-500 text-transparent bg-clip-text ">Hardware y software empresarial:</p>
-            <ul>
-              <li className="text-center p-5">
-Disponemos de una extensa red de colaboradores tecnológicos que nos capacitan para ofrecer las últimas innovaciones en software y hardware, asegurándonos de mantenernos al día con los requisitos específicos de su empresa o comercio.</li>
-            </ul>
-</div></div>
-
-<div id="containerservicios" className= "relative bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-l p-0.5 ">
-            <div className="flex flex-col justify-center items-center p-2 bg-gray-900 rounded-l ">
-            <p className="text-3xl text-center bg-gradient-to-r from-blue-500 to-emerald-500 text-transparent bg-clip-text ">Urgencias en el acto:</p>
-            <ul>
-              <li className="text-center p-5" >Contratos con diferentes opciones de SLA (tiempo de respuesta y solución de problemas). Respuesta telefónica y contacto directo en caso de urgencia o denegación de servicio.</li>
-            </ul>
-
-            </div></div>
-
-            <div className="flex justify-center ">        
-<button className="bg-gradient-to-l from-blue-500 to-emerald-500 text-white rounded-3xl p-0.5 w-fit h-fit">
-<a href='https://wa.me/+5491130265216' target='_blank' > 
-<span className="flex w-full bg-gray-900 text-white rounded-3xl p-2 md:text-2xl">
-Contáctenos
-</span></a>
-</button>
-</div>
-          </div> 
-        )}
-
-        <button
-          onClick={handleExpandClick}
-          className="bg-gradient-to-l from-blue-500 to-emerald-500 text-white rounded-3xl p-0.5 w-fit h-fit mt-4"
-        >
-          <span className="flex w-full bg-gray-950 text-white rounded-3xl p-2 md:text-l">
-            {expanded ? "Cerrar" : "Ver más"}
-          </span>
-        </button>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((svc, idx) => (
+          <motion.div
+            key={idx}
+            className="p-[2px] bg-gradient-to-r from-blue-500 to-emerald-500 rounded-2xl"
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <div
+              className="bg-gray-900 rounded-2xl p-6 flex flex-col items-center text-center relative"
+              onClick={() => setSelected(selected === idx ? null : idx)}
+            >
+              <Image
+                src={svc.icon}
+                alt={svc.title}
+                width={64}
+                height={64}
+                className="mb-4"
+              />
+              <h3 className="text-xl font-semibold text-white mb-2">
+                {svc.title}
+              </h3>
+              <div className="absolute top-4 right-4 text-blue-400">
+                <Plus size={24} className="animate-pulse cursor-pointer" />
+              </div>
+              <AnimatePresence>
+                {selected === idx && (
+                  <motion.p
+                    className="text-gray-200 mt-4 leading-relaxed"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {svc.desc}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </div>
+
+      <div className="flex justify-center mt-12">
+        <motion.a
+          href="https://wa.me/+5491130265216"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-gradient-to-l from-blue-500 to-emerald-500 rounded-3xl p-0.5"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        >
+          <span className="block bg-gray-900 text-white rounded-3xl px-8 py-3 text-lg font-medium flex items-center justify-center space-x-2">
+            <Plus size={20} />
+            <span>Contáctenos</span>
+          </span>
+        </motion.a>
+      </div>
+    </section>
   );
 };
 

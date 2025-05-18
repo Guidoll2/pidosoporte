@@ -1,99 +1,122 @@
-'use client'
-
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { useState } from 'react';
-      
+import { motion, AnimatePresence } from 'framer-motion';
+
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleNav = () => setMenuOpen(!menuOpen);
 
-const [menuOpen, setMenuOpen] = useState (false)
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-opacity-80 backdrop-blur-md bg-gradient-to-tr from-black to-[#102955] shadow-xl z-50">
+      <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-12">
+        {/* Logo */}
+        <Link href="/" className="text-3xl font-bold text-white transform transition-transform duration-300 hover:scale-105">
+          pido<span className="text-blue-500">soporte</span>
+        </Link>
 
-    const handleNav = () => {
-        setMenuOpen(!menuOpen);
-         
-    } 
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-8">
+          <Link href="#containerservicios" className="uppercase text-gray-100 font-semibold hover:text-white transition-colors duration-200">
+            Servicios
+          </Link>
+          <Link href="#nosotros" className="uppercase text-gray-100 font-semibold hover:text-white transition-colors duration-200">
+            Nosotros
+          </Link>
+          <Link href="#partners" className="uppercase text-gray-100 font-semibold hover:text-white transition-colors duration-200">
+            Partners
+          </Link>
+          <a
+            href="https://stci.freshdesk.com/support/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-100 font-semibold hover:text-white transition-colors duration-200"
+          >
+            Genere su ticket
+          </a>
+          <a
+            href="https://wa.me/+5491130265216"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-l from-blue-500 to-emerald-500 rounded-3xl p-0.5 hover:scale-105 transition-all duration-300"
+          >
+            <span className="block bg-gray-900 text-white rounded-3xl px-6 py-2 font-medium">
+              Contáctenos
+            </span>
+          </a>
+        </div>
 
-    return (
-      
-<nav id='NAVBAR' className='w-screen shadow-xl'> 
+        {/* Mobile Menu Button */}
+        <button
+          onClick={handleNav}
+          className="md:hidden flex flex-col justify-between w-8 h-8 focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          <span
+            className={`block h-0.5 bg-blue-500 transform transition-all duration-300 ${
+              menuOpen ? 'rotate-45 translate-y-2' : ''
+            }`}
+          />
+          <span
+            className={`block h-0.5 bg-blue-500 transition-opacity duration-300 ${
+              menuOpen ? 'opacity-0' : ''
+            }`}
+          />
+          <span
+            className={`block h-0.5 bg-blue-500 transform transition-all duration-300 ${
+              menuOpen ? '-rotate-45 -translate-y-2' : ''
+            }`}
+          />
+        </button>
+      </div>
 
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute top-0 left-0 w-full h-screen bg-gradient-to-tr from-black to-[#102955] p-8"
+          >
+            <div className="flex justify-end">
+              <button onClick={handleNav} aria-label="Close menu" className="text-white text-3xl">
+                &times;
+              </button>
+            </div>
+            <nav className="mt-16 flex flex-col items-center space-y-6">
+              <Link href="#containerservicios" onClick={handleNav} className="text-2xl text-gray-100 hover:text-white transition-colors duration-200">
+                Servicios
+              </Link>
+              <Link href="#nosotros" onClick={handleNav} className="text-2xl text-gray-100 hover:text-white transition-colors duration-200">
+                Nosotros
+              </Link>
+              <Link href="#partners" onClick={handleNav} className="text-2xl text-gray-100 hover:text-white transition-colors duration-200">
+                Partners
+              </Link>
+              <a
+                href="https://wa.me/+5491130265216"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleNav}
+                className="text-2xl text-gray-100 hover:text-white transition-colors duration-200"
+              >
+                Contáctenos
+              </a>
+              <a
+                href="https://stci.freshdesk.com/support/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleNav}
+                className="px-6 py-3 bg-gradient-to-br from-emerald-600 to-blue-700 text-white rounded-full font-semibold hover:scale-105 transition-transform duration-300"
+              >
+                Genere su ticket
+              </a>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+};
 
-<div className='flex justify-between items-center p-4'>
-
-<div className='flex items-center'>
-  <a className='' href='/'>
-    <p className="text-3xl text-white">pido<span className='text-blue-500'>soporte</span></p>
-  </a>
-</div>
-
-<ul className='hidden md:flex flex-row items-center gap-10'>
-  <li className='p-2'><a href="#containerservicios" className="text-gray-100 text-l font-bold uppercase">Servicios</a></li>
-  <li className='p-2'><a href="#nosotros" className="text-gray-100 text-l font-bold uppercase">Nosotros</a></li>
-  <li className='p-2'><a href="#partners" className="text-gray-100 text-l font-bold uppercase">Partners</a></li>
-</ul>
-
-<div id="NAVMD" className="hidden md:flex items-center justify-end gap-5 mr-5">
-  <p className='p-2'><a href="https://stci.freshdesk.com/support/login" target='_blank' className="text-gray-100 text-l font-bold">Genere su ticket</a></p>
-
-  <div className="">
-    <p className="bg-gradient-to-l from-blue-500 to-emerald-500 text-white rounded-3xl p-0.5 w-fit h-fit">
-      <a href='https://wa.me/+5491130265216' target='_blank'>
-        <span className="flex w-full bg-blue-950 text-white rounded-3xl p-2 md:text-l justify-end">
-          Contáctenos
-        </span>
-      </a>
-    </p>
-  </div>
-</div>
-
-</div>
- 
-<div onClick={handleNav} id="BOTONMENU" className="absolute top-8 right-4 cursor-pointer hover:opacity-30 hover:-skew-y-12 md:hidden">
-<menu/>
-
-<div className="bar w-7 h-0.5 mb-1 bg-blue-500  "></div>
-<div className="bar w-7 h-0.5 mb-1 bg-blue-500 "></div>
-<div className="bar w-5 ml-2 h-0.5 bg-blue-500 "></div>
-   
-</div>
-      
-<div className={
-    menuOpen
-    ? 'absolute left-0 top-0 w-screen h-screen sm:hidden bg-gradient-to-tr from-black to-[#102955] p-10 ease-in duration-500 z-[100]'
-    : 'absolute top-[-100%] top-0 left-0 w-screen h-s   creen p-10 ease-in duration-500 '
-
-}>
-<div className='block'>
-    <div onClick={handleNav} className='cursor-pointer flex justify-end'>
-        <h1 className='uppercase text-4xl text-white'>X</h1>
-    </div>
-
-<div id='MENUCELU' className='mt-10 flex justify-center'>
-
-<ul className="flex grid grid-cols-1 list-none text-center space-y-4">
-
-        
-          <li className='w-full  p-2'><a href="#containerservicios" className="text-gray-100 p-2 text-2xl">Servicios</a></li>
-          <li className='w-full  p-2'><a href="#nosotros" className="text-gray-100 p-2 text-2xl">Nosotros</a></li>
-          <li className='w-full  p-2'><a href="#partners" className="text-gray-100 p-2 text-2xl">Partners </a></li>
-          <li className='w-full  p-2'><a href='https://wa.me/+5491130265216' target='_blank' className="text-gray-100 p-2 text-2xl">Contáctenos </a></li>
-          <li className='w-full  p-2'><a href="https://stci.freshdesk.com/support/login" target='_blank' className="text-gray-100 p-2 text-2xl bg-gradient-to-br from-emerald-600 to-blue-700 rounded-full">Genere su ticket</a></li>
-         
-      </ul>
-</div>
-
-</div>
-</div>
-
-
-
- 
-
-
-</nav>
-
-);
-}
-
-
-export default Navbar;         
+export default Navbar;
