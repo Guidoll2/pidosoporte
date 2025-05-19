@@ -3,7 +3,8 @@ import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
 import {
-  SiWindows, SiIntel, SiAmd, SiLg, SiSamsung, SiLogitech, SiLinux, SiHp, SiAdobe, SiUbiquiti, SiMikrotik, SiWesterndigital
+  SiWindows, SiIntel, SiAmd, SiLg, SiSamsung, SiLogitech,
+  SiLinux, SiHp, SiAdobe, SiUbiquiti, SiMikrotik, SiWesterndigital
 } from 'react-icons/si';
 import { FaServer } from 'react-icons/fa6'; // Para Vertiv (no existe icono de marca)
 import 'slick-carousel/slick/slick.css';
@@ -20,20 +21,30 @@ const brandIcons = [
   { icon: SiHp, label: 'HP', color: '#0096D6' },
   { icon: SiAdobe, label: 'Adobe', color: '#FF0000' },
   { icon: SiUbiquiti, label: 'Ubiquiti', color: '#0559C9' },
-  { icon: FaServer, label: 'Vertiv', color: '#F97316' }, // Genérico para Vertiv
+  { icon: FaServer, label: 'Vertiv', color: '#F97316' },
   { icon: SiMikrotik, label: 'Mikrotik', color: '#1A1918' },
   { icon: SiWesterndigital, label: 'Western Digital', color: '#005195' },
 ];
 
-const ArrowButton = ({ onClick, direction }: { onClick?: () => void; direction: 'prev' | 'next'; }) => (
+const ArrowButton = ({
+  onClick,
+  direction
+}: {
+  onClick?: () => void;
+  direction: 'prev' | 'next';
+}) => (
   <motion.button
     onClick={onClick}
-    className={`absolute top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500`}
+    className="absolute top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500"
     whileHover={{ scale: 1.2 }}
     whileTap={{ scale: 0.9 }}
     style={{ [direction === 'prev' ? 'left' : 'right']: '10px' }}
   >
-    {direction === 'prev' ? <IoChevronBackOutline size={24} color="#fff" /> : <IoChevronForwardOutline size={24} color="#fff" />}
+    {direction === 'prev' ? (
+      <IoChevronBackOutline size={24} color="#fff" />
+    ) : (
+      <IoChevronForwardOutline size={24} color="#fff" />
+    )}
   </motion.button>
 );
 
@@ -65,13 +76,30 @@ export default function Carousel2() {
         />
       </button>
     ),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   };
 
   return (
-    <div className="relative bg-gray-600 p-6 rounded-3xl shadow-xl overflow-hidden">
+    <div className="relative bg-gray-800 p-6 rounded-3xl shadow-xl overflow-hidden">
       <Slider {...settings}>
         {brandIcons.map(({ icon: Icon, label, color }, idx) => (
-          <div key={idx} className="flex flex-col justify-center items-center p-4">
+          <div
+            key={idx}
+            className="flex flex-col justify-center items-center p-4 mx-2"
+          >
             <motion.div
               className="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center"
               whileHover={{ scale: 1.2 }}

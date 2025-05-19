@@ -51,14 +51,14 @@
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <Image
+          <img
             src="/image1.webp"
             alt="IT Support"
             width={600}
             height={600}
             className="rounded-2xl shadow-xl"
             id="hero-image"
-              unoptimized
+            
 
           />
         </motion.div>
