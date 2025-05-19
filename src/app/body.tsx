@@ -52,12 +52,14 @@
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <Image
-            src=  "/image1.webp"
+            src="/image1.webp"
             alt="IT Support"
             width={600}
             height={600}
             className="rounded-2xl shadow-xl"
             id="hero-image"
+              unoptimized
+
           />
         </motion.div>
       </section>
